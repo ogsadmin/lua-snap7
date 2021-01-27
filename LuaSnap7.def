@@ -1,0 +1,143 @@
+; ACHTUNG: diese Datei darf während dem Linken *NICHT* in dem IDE-Editor
+;          geöffnet sein, sonst kommt die Fehlermeldung "invalid ItemSpec"
+;          und der Linker kann nicht linken!
+;
+; Hinweise zu den IMPORTS: diese werden über impdef erzeugt, dann hier
+; reinkopiert - ist leider so, da Snap7 stdcall unmangled exportiert
+; (was unter Windows falsch ist, sollte cdecl oder mangled sein!).
+;
+LIBRARY     LUASNAP7.DLL
+
+EXPORTS
+ luaopen_luasnap7 = _luaopen_snap7
+
+IMPORTS
+    SNAP7.Cli_ABRead
+    SNAP7.Cli_ABWrite
+    SNAP7.Cli_AsABRead
+    SNAP7.Cli_AsABWrite
+    SNAP7.Cli_AsCTRead
+    SNAP7.Cli_AsCTWrite
+    SNAP7.Cli_AsCompress
+    SNAP7.Cli_AsCopyRamToRom
+    SNAP7.Cli_AsDBFill
+    SNAP7.Cli_AsDBGet
+    SNAP7.Cli_AsDBRead
+    SNAP7.Cli_AsDBWrite
+    SNAP7.Cli_AsDownload
+    SNAP7.Cli_AsEBRead
+    SNAP7.Cli_AsEBWrite
+    SNAP7.Cli_AsFullUpload
+    SNAP7.Cli_AsListBlocksOfType
+    SNAP7.Cli_AsMBRead
+    SNAP7.Cli_AsMBWrite
+    SNAP7.Cli_AsReadArea
+    SNAP7.Cli_AsReadSZL
+    SNAP7.Cli_AsReadSZLList
+    SNAP7.Cli_AsTMRead
+    SNAP7.Cli_AsTMWrite
+    SNAP7.Cli_AsUpload
+    SNAP7.Cli_AsWriteArea
+    SNAP7.Cli_CTRead
+    SNAP7.Cli_CTWrite
+    SNAP7.Cli_CheckAsCompletion
+    SNAP7.Cli_ClearSessionPassword
+    SNAP7.Cli_Compress
+    SNAP7.Cli_Connect
+    SNAP7.Cli_ConnectTo
+    SNAP7.Cli_CopyRamToRom
+    SNAP7.Cli_Create
+    SNAP7.Cli_DBFill
+    SNAP7.Cli_DBGet
+    SNAP7.Cli_DBRead
+    SNAP7.Cli_DBWrite
+    SNAP7.Cli_Delete
+    SNAP7.Cli_Destroy
+    SNAP7.Cli_Disconnect
+    SNAP7.Cli_Download
+    SNAP7.Cli_EBRead
+    SNAP7.Cli_EBWrite
+    SNAP7.Cli_ErrorText
+    SNAP7.Cli_FullUpload
+    SNAP7.Cli_GetAgBlockInfo
+    SNAP7.Cli_GetConnected
+    SNAP7.Cli_GetCpInfo
+    SNAP7.Cli_GetCpuInfo
+    SNAP7.Cli_GetExecTime
+    SNAP7.Cli_GetLastError
+    SNAP7.Cli_GetOrderCode
+    SNAP7.Cli_GetParam
+    SNAP7.Cli_GetPduLength
+    SNAP7.Cli_GetPgBlockInfo
+    SNAP7.Cli_GetPlcDateTime
+    SNAP7.Cli_GetPlcStatus
+    SNAP7.Cli_GetProtection
+    SNAP7.Cli_IsoExchangeBuffer
+    SNAP7.Cli_ListBlocks
+    SNAP7.Cli_ListBlocksOfType
+    SNAP7.Cli_MBRead
+    SNAP7.Cli_MBWrite
+    SNAP7.Cli_PlcColdStart
+    SNAP7.Cli_PlcHotStart
+    SNAP7.Cli_PlcStop
+    SNAP7.Cli_ReadArea
+    SNAP7.Cli_ReadMultiVars
+    SNAP7.Cli_ReadSZL
+    SNAP7.Cli_ReadSZLList
+    SNAP7.Cli_SetAsCallback
+    SNAP7.Cli_SetConnectionParams
+    SNAP7.Cli_SetConnectionType
+    SNAP7.Cli_SetParam
+    SNAP7.Cli_SetPlcDateTime
+    SNAP7.Cli_SetPlcSystemDateTime
+    SNAP7.Cli_SetSessionPassword
+    SNAP7.Cli_TMRead
+    SNAP7.Cli_TMWrite
+    SNAP7.Cli_Upload
+    SNAP7.Cli_WaitAsCompletion
+    SNAP7.Cli_WriteArea
+    SNAP7.Cli_WriteMultiVars
+    SNAP7.Par_AsBSend
+    SNAP7.Par_BRecv
+    SNAP7.Par_BSend
+    SNAP7.Par_CheckAsBRecvCompletion
+    SNAP7.Par_CheckAsBSendCompletion
+    SNAP7.Par_Create
+    SNAP7.Par_Destroy
+    SNAP7.Par_ErrorText
+    SNAP7.Par_GetLastError
+    SNAP7.Par_GetParam
+    SNAP7.Par_GetStats
+    SNAP7.Par_GetStatus
+    SNAP7.Par_GetTimes
+    SNAP7.Par_SetParam
+    SNAP7.Par_SetRecvCallback
+    SNAP7.Par_SetSendCallback
+    SNAP7.Par_Start
+    SNAP7.Par_StartTo
+    SNAP7.Par_Stop
+    SNAP7.Par_WaitAsBSendCompletion
+    SNAP7.Srv_ClearEvents
+    SNAP7.Srv_Create
+    SNAP7.Srv_Destroy
+    SNAP7.Srv_ErrorText
+    SNAP7.Srv_EventText
+    SNAP7.Srv_GetMask
+    SNAP7.Srv_GetParam
+    SNAP7.Srv_GetStatus
+    SNAP7.Srv_LockArea
+    SNAP7.Srv_PickEvent
+    SNAP7.Srv_RegisterArea
+    SNAP7.Srv_SetCpuStatus
+    SNAP7.Srv_SetEventsCallback
+    SNAP7.Srv_SetMask
+    SNAP7.Srv_SetParam
+    SNAP7.Srv_SetRWAreaCallback
+    SNAP7.Srv_SetReadEventsCallback
+    SNAP7.Srv_Start
+    SNAP7.Srv_StartTo
+    SNAP7.Srv_Stop
+    SNAP7.Srv_UnlockArea
+    SNAP7.Srv_UnregisterArea
+
+
