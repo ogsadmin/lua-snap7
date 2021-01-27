@@ -42,10 +42,10 @@ void reg_module_client(sol::table& module) {
 		"TMWrite", &TS7Client::TMWrite,
 		"CTRead", &TS7Client::CTRead,
 		"CTWrite", &TS7Client::CTWrite,
-		"TM2Read", &TS7Client::TM2Read,
-		"TM2Write", &TS7Client::TM2Write,
-		"CT2Read", &TS7Client::CT2Read,
-		"CT2Write", &TS7Client::CT2Write,
+//		"TM2Read", &TS7Client::TM2Read,     // removed in V1.4.2
+//		"TM2Write", &TS7Client::TM2Write,   // removed in V1.4.2
+//		"CT2Read", &TS7Client::CT2Read,     // removed in V1.4.2
+//		"CT2Write", &TS7Client::CT2Write,   // removed in V1.4.2
 		"ListBlocks", &TS7Client::ListBlocks,
 		"GetAgBlockInfo", &TS7Client::GetAgBlockInfo,
 		"GetPgBlockInfo", &TS7Client::GetPgBlockInfo,
