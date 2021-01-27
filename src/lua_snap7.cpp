@@ -1,7 +1,7 @@
 
 #include "module_inc.h"
 
-#define SNAP7_VERSION 1.41
+#define SNAP7_VERSION 1.42
 
 namespace lua_module {
 	void reg_module_enums(sol::table& module);
