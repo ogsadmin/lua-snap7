@@ -46,7 +46,7 @@
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base)'!=''">
         <DCC_CBuilderOutput>JPHNE</DCC_CBuilderOutput>
-        <IntermediateOutputDir>.\$(Platform)\$(Config)</IntermediateOutputDir>
+        <IntermediateOutputDir>..\..\..\build\$(MSBuildProjectName)\$(Platform)\$(Config)</IntermediateOutputDir>
         <FinalOutputDir>.\$(Platform)\$(Config)</FinalOutputDir>
         <BCC_wpar>false</BCC_wpar>
         <BCC_OptimizeForSpeed>true</BCC_OptimizeForSpeed>
@@ -58,8 +58,8 @@
         <SanitizedProjectName>LuaSnap7</SanitizedProjectName>
         <ILINK_GenerateImportLibrary>true</ILINK_GenerateImportLibrary>
         <_TCHARMapping>char</_TCHARMapping>
-        <IncludePath>..\..\he-libsnap7\release\Wrappers\c-cpp\;..\62180b719d\;lua\;src\;sol\;$(IncludePath)</IncludePath>
-        <ILINK_LibraryPath>..\..\he-libsnap7\release\Wrappers\c-cpp\;..\62180b719d\;lua\;src\;sol\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+        <IncludePath>..\..\Common\lua\;..\libsnap7\release\Wrappers\c-cpp\;..\..\he-libsnap7\release\Wrappers\c-cpp\;..\62180b719d\;lua\;src\;sol\;$(IncludePath)</IncludePath>
+        <ILINK_LibraryPath>..\..\Common\lua\;..\libsnap7\release\Wrappers\c-cpp\;..\..\he-libsnap7\release\Wrappers\c-cpp\;..\62180b719d\;lua\;src\;sol\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
         <Defines>_no_UA_ENABLE_ENCRYPTION;$(Defines)</Defines>
         <VerInfo_Locale>1031</VerInfo_Locale>
         <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
@@ -69,9 +69,10 @@
         <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
         <BT_BuildType>Debug</BT_BuildType>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
-        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
         <VerInfo_Locale>1033</VerInfo_Locale>
         <ILINK_LibraryPath>D:\Projekte\Playground\NetworkProtocols\SiemensPLC\Snap7\LuaSnap7\lua-snap7\;D:\Projekte\Playground\NetworkProtocols\OPC\open62541\V1.1.3\LuaOPCUA\lua\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+        <Manifest_File>(None)</Manifest_File>
+        <FinalOutputDir>..\..\..\bin\$(Config)</FinalOutputDir>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win64)'!=''">
         <PackageImports>adortl;appanalytics;bcbie;bcbsmp;bindcomp;bindcompdbx;bindcompfmx;bindcompvcl;bindcompvclsmp;bindengine;CloudService;CustomIPTransport;cxExportRS27;cxGridRS27;cxLibraryRS27;cxPivotGridChartRS27;cxPivotGridOLAPRS27;cxPivotGridRS27;cxTreeListRS27;cxVerticalGridRS27;DataSnapClient;DataSnapCommon;DataSnapConnectors;DatasnapConnectorsFreePascal;DataSnapFireDAC;DataSnapIndy10ServerTransport;DataSnapNativeClient;DataSnapProviderClient;DataSnapServer;DataSnapServerMidas;dbexpress;dbrtl;dbxcds;DbxClientDriver;DbxCommonDriver;DBXDb2Driver;DBXFirebirdDriver;DBXInformixDriver;DBXInterBaseDriver;DBXMSSQLDriver;DBXMySQLDriver;DBXOdbcDriver;DBXOracleDriver;DBXSqliteDriver;DBXSybaseASADriver;DBXSybaseASEDriver;dsnap;dsnapcon;dsnapxml;dxADOServerModeRS27;dxCloudServiceLibraryRS27;dxComnRS27;dxCoreRS27;dxDBXServerModeRS27;dxFireDACServerModeRS27;dxGDIPlusRS27;dxHttpIndyRequestRS27;dxmdsRS27;dxPSCoreRS27;dxPScxCommonRS27;dxPScxExtCommonRS27;dxPScxGridLnkRS27;dxPScxPCProdRS27;dxPScxPivotGridLnkRS27;dxPScxTLLnkRS27;dxPScxVGridLnkRS27;dxPSDBTeeChartRS27;dxPSdxLCLnkRS27;dxPSdxSpreadSheetLnkRS27;dxPSLnksRS27;dxPSTeeChartRS27;dxServerModeRS27;dxSkinsCoreRS27;dxSpreadSheetConditionalFormattingDialogsRS27;dxSpreadSheetCoreConditionalFormattingDialogsRS27;dxSpreadSheetCoreRS27;dxSpreadSheetReportDesignerRS27;dxSpreadSheetRS27;emsclient;emsclientfiredac;emsedge;emshosting;emsserverresource;FireDAC;FireDACADSDriver;FireDACASADriver;FireDACCommon;FireDACCommonDriver;FireDACCommonODBC;FireDACDb2Driver;FireDACDBXDriver;FireDACDSDriver;FireDACIBDriver;FireDACInfxDriver;FireDACMongoDBDriver;FireDACMSAccDriver;FireDACMSSQLDriver;FireDACMySQLDriver;FireDACODBCDriver;FireDACOracleDriver;FireDACPgDriver;FireDACSqliteDriver;FireDACTDataDriver;fmx;fmxase;fmxdae;fmxFireDAC;fmxinfopower;fmxobj;FMXTee;FmxTeeUI;ibmonitor;ibxbindings;ibxpress;IndyCore;IndyIPClient;IndyIPCommon;IndyIPServer;IndyProtocols;IndySystem;inet;inetdb;inetdbxpress;RESTBackendComponents;RESTComponents;rtl;soapmidas;soaprtl;soapserver;Tee;TeeDB;TeeUI;tethering;vcl;vclactnband;vcldb;vcldsnap;vcledge;vclFireDAC;vclib;vclie;vclimg;VCLRESTComponents;VclSmp;VCLTMSFNCCorePkgDXE13;vcltouch;vclwinx;vclx;xmlrtl;$(PackageImports)</PackageImports>
@@ -116,11 +117,14 @@ $(PreBuildEvent)]]></PreBuildEvent>
         <BCC_UseClassicCompiler>false</BCC_UseClassicCompiler>
     </PropertyGroup>
     <ItemGroup>
-        <CppCompile Include="..\..\he-libsnap7\release\Wrappers\c-cpp\snap7.cpp">
-            <BuildOrder>13</BuildOrder>
+        <None Include="..\..\Common\lua\lua.hpp">
+            <BuildOrder>16</BuildOrder>
+        </None>
+        <CppCompile Include="..\libsnap7\release\Wrappers\c-cpp\snap7.cpp">
+            <BuildOrder>17</BuildOrder>
         </CppCompile>
-        <None Include="..\..\he-libsnap7\release\Wrappers\c-cpp\snap7.h">
-            <BuildOrder>14</BuildOrder>
+        <None Include="..\libsnap7\release\Wrappers\c-cpp\snap7.h">
+            <BuildOrder>18</BuildOrder>
         </None>
         <CppCompile Include="DllMain.cpp">
             <BuildOrder>1</BuildOrder>
@@ -132,9 +136,6 @@ $(PreBuildEvent)]]></PreBuildEvent>
             <BuildOrder>0</BuildOrder>
             <PCH>true</PCH>
         </PCHCompile>
-        <None Include="lua\lua.hpp">
-            <BuildOrder>14</BuildOrder>
-        </None>
         <LibFiles Include="lua\lua5.1.lib" Condition="'$(Platform)'=='Win32'">
             <BuildOrder>17</BuildOrder>
             <IgnorePath>true</IgnorePath>
@@ -205,7 +206,7 @@ $(PreBuildEvent)]]></PreBuildEvent>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile Condition="'$(DynamicRTL)'=='true' And '$(Multithreaded)'=='true'" LocalName="$(BDS)\bin\cc32c270mt.dll" Class="DependencyModule">
+                <DeployFile Condition="'$(DynamicRTL)'=='true' And '$(Multithreaded)'!='true'" LocalName="$(BDS)\bin\cc32c270.dll" Class="DependencyModule">
                     <Platform Name="Win32">
                         <Overwrite>true</Overwrite>
                     </Platform>
@@ -277,13 +278,13 @@ $(PreBuildEvent)]]></PreBuildEvent>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile Condition="'$(DynamicRTL)'=='true'" LocalName="$(BDS)\Redist\osx64\libcgcrtl.dylib" Class="DependencyModule">
-                    <Platform Name="OSX64">
+                <DeployFile Condition="'$(DynamicRTL)'=='true' And '$(Multithreaded)'=='true'" LocalName="$(BDS)\bin\cc32c270mt.dll" Class="DependencyModule">
+                    <Platform Name="Win32">
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile Condition="'$(DynamicRTL)'=='true' And '$(Multithreaded)'!='true'" LocalName="$(BDS)\bin\cc32c270.dll" Class="DependencyModule">
-                    <Platform Name="Win32">
+                <DeployFile Condition="'$(DynamicRTL)'=='true'" LocalName="$(BDS)\Redist\osx64\libcgcrtl.dylib" Class="DependencyModule">
+                    <Platform Name="OSX64">
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -981,7 +982,7 @@ $(PreBuildEvent)]]></PreBuildEvent>
     <Import Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj" Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')"/>
     <Import Project="$(MSBuildProjectName).deployproj" Condition="Exists('$(MSBuildProjectName).deployproj')"/>
     <PropertyGroup Condition="'$(Config)'=='Debug' And '$(Platform)'=='Win32'">
-        <PreBuildEvent>prebuild.cmd</PreBuildEvent>
+        <PreBuildEvent>prebuild.cmd</PreBuildEvent>
         <PreBuildEventIgnoreExitCode>False</PreBuildEventIgnoreExitCode>
         <PreLinkEvent/>
         <PreLinkEventIgnoreExitCode>False</PreLinkEventIgnoreExitCode>
